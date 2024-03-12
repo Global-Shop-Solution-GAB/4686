@@ -1,0 +1,1221 @@
+Program.Sub.ScreenSU.Start
+gui.F_MaintCfgFile..create
+gui.F_MaintCfgFile..caption("Workcenter HTML Configurations")
+gui.F_MaintCfgFile..size(6240,5145)
+gui.F_MaintCfgFile..minx(0)
+gui.F_MaintCfgFile..miny(0)
+gui.F_MaintCfgFile..position(0,0)
+gui.F_MaintCfgFile..event(unload,f_maintcfgfile_unload)
+gui.F_MaintCfgFile..alwaysontop(False)
+gui.F_MaintCfgFile..fontname("Arial")
+gui.F_MaintCfgFile..fontsize(8)
+gui.F_MaintCfgFile..forecolor(0)
+gui.F_MaintCfgFile..fontstyle(,,,,)
+gui.F_MaintCfgFile..BackColor(-2147483633)
+gui.F_MaintCfgFile..controlbox(True)
+gui.F_MaintCfgFile..maxbutton(False)
+gui.F_MaintCfgFile..minbutton(True)
+gui.F_MaintCfgFile..mousepointer(0)
+gui.F_MaintCfgFile..moveable(True)
+gui.F_MaintCfgFile..sizeable(False)
+gui.F_MaintCfgFile..ShowInTaskBar(True)
+gui.F_MaintCfgFile..titlebar(True)
+gui.F_MaintCfgFile.lblWorkCentersGrid.create(label,"Workcenters:",True,2025,225,1,115,1285,True,0,Arial,8,-2147483633,0)
+gui.F_MaintCfgFile.lblWorkCentersGrid.defaultvalue("")
+gui.F_MaintCfgFile.lblWorkCentersGrid.controlgroup(0)
+gui.F_MaintCfgFile.gsfg_Workcenters.create(gsflexgrid)
+gui.F_MaintCfgFile.gsfg_Workcenters.FixedRows(0)
+gui.F_MaintCfgFile.gsfg_Workcenters.FixedCols(0)
+gui.F_MaintCfgFile.gsfg_Workcenters.visible(True)
+gui.F_MaintCfgFile.gsfg_Workcenters.size(5775,2475)
+gui.F_MaintCfgFile.gsfg_Workcenters.zorder(0)
+gui.F_MaintCfgFile.gsfg_Workcenters.position(100,1500)
+gui.F_MaintCfgFile.gsfg_Workcenters.enabled(True)
+gui.F_MaintCfgFile.gsfg_Workcenters.event(posttextmatrix,gsfg_workcenters_posttextmatrix)
+gui.F_MaintCfgFile.gsfg_Workcenters.event(commandclick,gsfg_workcenters_commandclick)
+gui.F_MaintCfgFile.cmdSaveWCs.create(button)
+gui.F_MaintCfgFile.cmdSaveWCs.caption("Save")
+gui.F_MaintCfgFile.cmdSaveWCs.visible(True)
+gui.F_MaintCfgFile.cmdSaveWCs.size(855,480)
+gui.F_MaintCfgFile.cmdSaveWCs.zorder(0)
+gui.F_MaintCfgFile.cmdSaveWCs.position(100,4010)
+gui.F_MaintCfgFile.cmdSaveWCs.enabled(True)
+gui.F_MaintCfgFile.cmdSaveWCs.fontname("Arial")
+gui.F_MaintCfgFile.cmdSaveWCs.fontsize(8)
+gui.F_MaintCfgFile.cmdSaveWCs.event(click,cmdsavewcs_click)
+gui.F_MaintCfgFile.cmdSaveWCs.defaultvalue("")
+gui.F_MaintCfgFile.cmdSaveWCs.controlgroup(0)
+gui.F_MaintCfgFile.cmdAddWC.create(button)
+gui.F_MaintCfgFile.cmdAddWC.caption("Add Workcenter")
+gui.F_MaintCfgFile.cmdAddWC.visible(True)
+gui.F_MaintCfgFile.cmdAddWC.size(1560,375)
+gui.F_MaintCfgFile.cmdAddWC.zorder(0)
+gui.F_MaintCfgFile.cmdAddWC.position(4300,3995)
+gui.F_MaintCfgFile.cmdAddWC.enabled(True)
+gui.F_MaintCfgFile.cmdAddWC.fontname("Arial")
+gui.F_MaintCfgFile.cmdAddWC.fontsize(8)
+gui.F_MaintCfgFile.cmdAddWC.event(click,cmdaddwc_click)
+gui.F_MaintCfgFile.cmdAddWC.defaultvalue("")
+gui.F_MaintCfgFile.cmdAddWC.controlgroup(0)
+gui.F_MaintCfgFile.txtLogo.create(textbox,"",True,5265,300,0,100,405,False,0,Arial,8,-2147483643,1)
+gui.F_MaintCfgFile.txtLogo.defaultvalue("")
+gui.F_MaintCfgFile.txtLogo.controlgroup(0)
+gui.F_MaintCfgFile.lblLogo.create(label,"Logo(280px X 85px):",True,2010,255,1,125,100,True,0,Arial,8,-2147483633,0)
+gui.F_MaintCfgFile.lblLogo.defaultvalue("")
+gui.F_MaintCfgFile.lblLogo.controlgroup(0)
+gui.F_MaintCfgFile.cmdLogoBrws.create(button)
+gui.F_MaintCfgFile.cmdLogoBrws.caption("^")
+gui.F_MaintCfgFile.cmdLogoBrws.visible(True)
+gui.F_MaintCfgFile.cmdLogoBrws.size(405,390)
+gui.F_MaintCfgFile.cmdLogoBrws.zorder(0)
+gui.F_MaintCfgFile.cmdLogoBrws.position(5480,350)
+gui.F_MaintCfgFile.cmdLogoBrws.enabled(True)
+gui.F_MaintCfgFile.cmdLogoBrws.fontname("Arial")
+gui.F_MaintCfgFile.cmdLogoBrws.fontsize(8)
+gui.F_MaintCfgFile.cmdLogoBrws.event(click,cmdlogobrws_click)
+gui.F_MaintCfgFile.cmdLogoBrws.defaultvalue("")
+gui.F_MaintCfgFile.cmdLogoBrws.controlgroup(0)
+gui.F_MaintCfgFile.lbl3.create(label,"Sleep Time In Minutes",True,1560,210,1,100,715,True,0,Arial,8,-2147483633,0)
+gui.F_MaintCfgFile.lbl3.defaultvalue("")
+gui.F_MaintCfgFile.lbl3.controlgroup(0)
+gui.F_MaintCfgFile.txtSleep.create(textbox,"2",True,390,300,0,100,925,True,1,Arial,8,-2147483643,1)
+gui.F_MaintCfgFile.txtSleep.numericonly(2)
+gui.F_MaintCfgFile.txtSleep.event(lostfocus,txtsleep_lostfocus)
+gui.F_MaintCfgFile.txtSleep.defaultvalue("")
+gui.F_MaintCfgFile.txtSleep.controlgroup(0)
+gui.F_MaintCfgFile.chkDefaultSleep.create(checkbox)
+gui.F_MaintCfgFile.chkDefaultSleep.caption("Default")
+gui.F_MaintCfgFile.chkDefaultSleep.visible(True)
+gui.F_MaintCfgFile.chkDefaultSleep.size(885,240)
+gui.F_MaintCfgFile.chkDefaultSleep.zorder(0)
+gui.F_MaintCfgFile.chkDefaultSleep.position(590,985)
+gui.F_MaintCfgFile.chkDefaultSleep.enabled(True)
+gui.F_MaintCfgFile.chkDefaultSleep.alignment(0)
+gui.F_MaintCfgFile.chkDefaultSleep.fontname("Arial")
+gui.F_MaintCfgFile.chkDefaultSleep.fontsize(8)
+gui.F_MaintCfgFile.chkDefaultSleep.event(click,chkdefaultsleep_click)
+gui.F_MaintCfgFile.chkDefaultSleep.defaultvalue("")
+gui.F_MaintCfgFile.chkDefaultSleep.controlgroup(0)
+gui.F_MaintCfgFile.chkDefaultLogo.create(checkbox)
+gui.F_MaintCfgFile.chkDefaultLogo.caption("Default Logo")
+gui.F_MaintCfgFile.chkDefaultLogo.visible(True)
+gui.F_MaintCfgFile.chkDefaultLogo.size(1215,225)
+gui.F_MaintCfgFile.chkDefaultLogo.zorder(0)
+gui.F_MaintCfgFile.chkDefaultLogo.position(1700,100)
+gui.F_MaintCfgFile.chkDefaultLogo.enabled(True)
+gui.F_MaintCfgFile.chkDefaultLogo.alignment(0)
+gui.F_MaintCfgFile.chkDefaultLogo.fontname("Arial")
+gui.F_MaintCfgFile.chkDefaultLogo.fontsize(8)
+gui.F_MaintCfgFile.chkDefaultLogo.event(click,chkdefaultlogo_click)
+gui.F_MaintCfgFile.chkDefaultLogo.defaultvalue("")
+gui.F_MaintCfgFile.chkDefaultLogo.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uJob.Define("Job",String,WorkOrder)
+Variable.UDT.uJob.Define("Seq",String,Seq)
+Variable.UDT.uJob.Define("Employee",String)
+Variable.UDT.uJob.Define("Part",String)
+Variable.UDT.uJob.Define("Priority",String,Priority)
+Variable.UDT.uJob.Define("Date_Due",String)
+Variable.UDT.uJob.Define("Release_Date",String)
+Variable.UDT.uJob.Define("Seq_Date_Due",Date,Seq_Date_Due)
+Variable.UDT.uJob.Define("Seq_Date_String",String)
+Variable.UDT.uJob.Define("Qty_Order",Float,Units_Open)
+Variable.UDT.uJob.Define("Qty_Completed",Float,Units_Complete)
+Variable.UDT.uJob.Define("Qty_Ord_String",String)
+Variable.UDT.uJob.Define("Qty_Complete_String",String)
+Variable.UDT.uJob.Define("Start_Time",String,Start_Time)
+Variable.UDT.uJob.Define("Start_Date",Date,Start_Date)
+Variable.uGlobal.uJob.Declare("uJob")
+Variable.UDT.uJobCopy.Define("Job",String,WorkOrder)
+Variable.UDT.uJobCopy.Define("Seq",String,Seq)
+Variable.UDT.uJobCopy.Define("Employee",String)
+Variable.UDT.uJobCopy.Define("Part",String)
+Variable.UDT.uJobCopy.Define("Priority",String,Priority)
+Variable.UDT.uJobCopy.Define("Date_Due",String)
+Variable.UDT.uJobCopy.Define("Release_Date",String)
+Variable.UDT.uJobCopy.Define("Seq_Date_Due",Date,Seq_Date_Due)
+Variable.UDT.uJobCopy.Define("Seq_Date_String",String)
+Variable.UDT.uJobCopy.Define("Qty_Order",Float,Units_Open)
+Variable.UDT.uJobCopy.Define("Qty_Completed",Float,Units_Complete)
+Variable.UDT.uJobCopy.Define("Qty_Ord_String",String)
+Variable.UDT.uJobCopy.Define("Qty_Complete_String",String)
+Variable.UDT.uJobCopy.Define("Start_Time",String,Start_Time)
+Variable.UDT.uJobCopy.Define("Start_Date",Date,Start_Date)
+Variable.uGlobal.uJobCopy.Declare("uJobCopy")
+Variable.Global.sWCs.Declare(String)
+Variable.Global.sFQP.Declare(String)
+
+Variable.Global.sOrigLogo.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'This is HTML page that displays open jobs by WC defined by a .cfg file that stores the Work Centers that need to be displayed.
+'Included in this program is a maintenance program to add and remove WC's that do not need an html page displayed.
+'Coded by SFF
+'5/1/2015
+
+'Updating the program so that it no longer uses any .cfg files and instead uses GCG_4686_HTML_CONFIG database table. Any existing code that uses the files should be obsolete and unneeded outside documentation puproses.
+'Coded by BCC
+'7/8/2015
+
+'Changing UDTs to Datatables, modified certain columns to be removed/hidden
+'Coded by Dawn Hughes
+'8/29/2017
+
+'completed revisions 9/7/2017 Dawn Hughes
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+V.Global.sTitles.Declare(String)
+V.Local.i.Declare(Float)
+V.Local.iRow.Declare(Float)
+V.Local.sWorkcenters.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sWC.Declare(String)
+V.Local.sCD.Declare(String)
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+''Switches <> "M" then make html files
+F.Intrinsic.Control.If(V.Caller.Switches,<>,"M")
+	'get WC's
+	F.Data.DataTable.CreateFromSQL("W", "conX", "SELECT Workcenter, Cutoff_Days FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'W'", TRUE)
+		Function.Intrinsic.Control.For(V.Local.i, 0, V.DataTable.W.RowCount--, 1)
+			V.Local.sWC.Set(V.DataTable.W(V.Local.i).Workcenter!FieldVal)
+			V.Local.sCD.Set(V.DataTable.W(V.Local.i).Cutoff_Days!FieldVal)
+			F.Intrinsic.Control.CallSub(Getopenjobs,"WC",V.Local.sWC,"Cutoff",V.Local.sCD)
+			F.Intrinsic.Control.CallSub(Loadtable,"WC",V.Local.sWC)
+		F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.Else
+	'launch maintenance screen
+	F.Intrinsic.Control.CallSub(Buildstyles)
+	'if .cfg file exists then load existing data
+	F.Intrinsic.Control.CallSub(Load_gsfgworkcenters)
+	'Load Sleep and Row Count Values
+	F.Intrinsic.Control.CallSub(Loadsleep)
+	'Load Default Logo
+	F.Intrinsic.Control.CallSub(Loadlogo)
+	Gui.F_MaintCfgFile..Show
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.LoadTable.Start
+F.Intrinsic.Control.SetErrorHandler("LoadTable_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local..BulkDeclareString(sRet, sFile, sSQl, sHTML, sTemp, sReplace)
+V.Local..BulkDeclareLong(i, iSleep)
+V.Local..BulkDeclareDate(dDate, dDate7)
+
+Function.Intrinsic.Control.If(v.DataTable.JOB.Exists, =, TRUE)
+	'Sequence due date (Cell would turn red if due date is current day. Cell would turn orange if date is within 7 days out)
+		F.Intrinsic.Date.DateAdd("D", 7, V.Ambient.Date, V.Local.dDate7)
+		F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.JOB.RowCount--,1)
+			V.Local.dDate.Set(V.DataTable.JOB(v.Local.i).SEQ_DATE_DUE!Fieldval)
+			'V.Local.sRet.Set(v.DataTable.JOB(v.Local.i).SEQ_DATE_DUE_V!FieldValTrim)
+			Function.Intrinsic.Control.If(V.Local.dDate,<=, V.Ambient.Date)
+				F.Intrinsic.String.Build("<td class={0}red-cells{0}>{1}",V.Ambient.DblQuote,V.DataTable.JOB(v.Local.i).SEQ_DATE_DUE_T!FieldValTrim,V.Local.sRet)
+				F.Data.DataTable.SetValue("JOB",V.Local.i,"SEQ_DATE_DUE_V",V.Local.sRet)	
+			Function.Intrinsic.Control.ElseIf(V.Local.dDate,<=, V.Local.dDate7)
+				F.Intrinsic.String.Build("<td class={0}orange-cells{0}>{1}",V.Ambient.DblQuote,V.DataTable.JOB(v.Local.i).SEQ_DATE_DUE_T!FieldValTrim,V.Local.sRet)
+				F.Data.DataTable.SetValue("JOB",V.Local.i,"SEQ_DATE_DUE_V",V.Local.sRet)
+			Function.Intrinsic.Control.Else
+				F.Data.DataTable.SetValue("JOB",V.Local.i,"SEQ_DATE_DUE_V",V.DataTable.JOB(v.Local.i).SEQ_DATE_DUE_T!FieldValTrim)	
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.i)
+	F.Data.DataTable.RemoveColumn("JOB", "SEQ_DATE_DUE")
+	F.Data.DataTable.RemoveColumn("JOB", "SEQ_DATE_DUE_T")
+	
+	'if the table is > 10 based on current font size then we add empty rows to the top and the bottom of the table- this way top and bottom rows are visible for longer
+	Function.Intrinsic.Control.If(v.DataTable.JOB.RowCount, >, 10)
+		F.Intrinsic.Control.For(V.Local.i,0,10,1)
+			F.Data.DataTable.AddRow("JOB",  "JOB_V", "")
+		F.Intrinsic.Control.Next(V.Local.i)
+		F.Intrinsic.Control.For(V.Local.i,0,5,1)
+			Function.Data.DataTable.MoveRow("JOB",V.DataTable.JOB.RowCount--, 0)
+		F.Intrinsic.Control.Next(V.Local.i)
+	Function.Intrinsic.Control.EndIf
+
+	Function.Data.DataTable.ExportHTML("JOB", "","", "", True, V.Local.sRet)
+	
+	'edit tags for cells to make sure only the correct tag is passed to the HTML file
+	F.Intrinsic.String.Build("<td><td class={0}red-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}red-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}orange-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}orange-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}yellow-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}yellow-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}mist-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}mist-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}gray-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}gray-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}blue-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}blue-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}cyan-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}cyan-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("<td><td class={0}magenta-cells{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Build("<td class={0}magenta-cells{0}>",V.Ambient.DblQuote,V.Local.sReplace)
+	F.Intrinsic.String.Replace(V.Local.sRet,V.Local.sTemp,V.Local.sReplace,V.Local.sRet)
+	
+	'find and replace <table> tag with the below table tag with attributes
+	'<!--<table class="TFtable" border="0"><tbody>-->
+	F.Intrinsic.String.Replace(V.Local.sRet,"<table>","<table class="TFtable" border="0"><tbody>",V.Local.sRet)
+	F.Intrinsic.String.Replace(V.Local.sRet,"</table>","</tbody></table>",V.Local.sRet)
+	
+	'find <td> and replace with <td class="data-cell">
+	F.Intrinsic.String.Build("<td class={0}data-cell{0}>",V.Ambient.DblQuote,V.Local.sTemp)
+	F.Intrinsic.String.Replace(V.Local.sRet,"<td>",V.Local.sTemp,V.Local.sRet)
+	
+	'left and right cells on each row<td>&nbsp;</td>
+	F.Intrinsic.String.Replace(V.Local.sRet,"<tr>","<tr><td class="Empty">&nbsp;</td>",V.Local.sRet)
+	F.Intrinsic.String.Replace(V.Local.sRet,"</tr>","<td class="Last">&nbsp;</td></tr>",V.Local.sRet)
+	
+	F.Intrinsic.String.Build("{0}\GAB\GAS\GCG_4686_WC_TEMPLATE.html",V.Caller.PluginsDir,V.Local.sFile)
+	'load template
+	F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sHTML)
+	
+	'replace wildcard from template with html table(v.local.sRet)
+	F.Intrinsic.String.Replace(V.Local.sHTML,"#table",V.Local.sRet,V.Local.sHTML)
+	
+	'replace wildcard from template #sleep with GCG_4686_HTML_CONFIG Refresh_Rate
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT Refresh_Rate FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'P'")
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+		V.Local.iSleep.Set(V.ODBC.conX!rst.FieldValTrim!Refresh_Rate)
+		F.Intrinsic.Math.Mult(V.Local.iSleep,60000,V.Local.iSleep)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"#sleep",V.Local.iSleep,V.Local.sHTML)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Replace(V.Local.sHTML,"#sleep",120000,V.Local.sHTML)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+	
+	'Replace logo if personalized choice exists
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT Logo FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"customer-logo_fpo.jpg",V.ODBC.conX!rst.FieldValTrim!Logo,V.Local.sHTML)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+	
+	'Replace "Shop Floor Screen with Work Center Name"
+	F.Intrinsic.string.Build("Select WC_NAME from v_Workcenters where MACHINE = '{0}'",V.Args.WC,V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSQl)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		F.Intrinsic.String.Build("<td rowspan="2" class="FF_hdr">{0}-{1}",V.Args.WC,V.ODBC.conX!rst.FieldValTrim!WC_NAME,V.Local.sRet)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"<td rowspan="2" class="FF_hdr">Shop Floor Screen",V.Local.sRet,V.Local.sHTML)
+		F.Intrinsic.String.Build("<title>{0}-{1}",V.Args.WC,V.ODBC.conX!rst.FieldValTrim!WC_NAME,V.Local.sRet)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"<title>Shop Floor Screen",V.Local.sRet,V.Local.sHTML)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("<td rowspan="2" class="FF_hdr">Workcenter: {0}",V.Args.WC,V.Local.sRet)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"<td rowspan="2" class="FF_hdr">Shop Floor Screen",V.Local.sRet,V.Local.sHTML)
+		F.Intrinsic.String.Build("<title>Workcenter: {0}",V.Args.WC,V.Local.sRet)
+		F.Intrinsic.String.Replace(V.Local.sHTML,"<title>Shop Floor Screen",V.Local.sRet,V.Local.sHTML)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+	
+	'save new HTML file for that workcenter
+	F.Intrinsic.String.Build("{0}\GAB\GAS\GCG_WIP_{1}_{2}.html",V.Caller.PluginsDir,V.Args.WC,V.Caller.CompanyCode,V.Local.sFile)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sHTML)
+
+	'check if it is ran from menu item to initially launch the screens
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"O")
+		F.Intrinsic.Task.ShellExec(V.Caller.Handle,"OPEN",V.Local.sFile,"","",1)
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("LoadTable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.LoadTable.End
+
+Program.Sub.GetOpenJobs.Start
+F.Intrinsic.Control.SetErrorHandler("GetOpenJobs_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local..BulkDeclareString(ssql, sCutoffDate, sTemp, sRet, sstarttime, sstartdate, sHourNow,sAmPm, sMinNow, sHours, sDate, sTime, sTempMin)
+V.local.dDate.Declare(Date)
+v.Local.dstarttime.Declare(date)
+V.Local..BulkDeclareLong(i, iDays,iC)
+
+V.Local..BulkDeclareFloat(fStartMin, fStartTime, fEmpOpen, fTimeNow, fStartHour)
+
+F.Intrinsic.Control.If(V.Args.Cutoff,<>,"")
+	F.Intrinsic.Math.ConvertToFloat(V.Args.Cutoff,V.Local.iDays)
+F.Intrinsic.Control.Else
+	V.Local.iDays.Set(7)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Date.DateAdd("D",V.local.iDays,V.ambient.date,V.local.dDate)
+F.Intrinsic.String.Format(V.Local.dDate,"YYYY-MM-DD",V.Local.sCutoffDate)
+
+Function.Intrinsic.Control.If(V.DataTable.DTJOB.Exists, =, TRUE)
+		F.Data.DataTable.Close("DTJOB")
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.If(V.DataTable.JOB.Exists, =, TRUE)
+			F.Data.DataTable.Close("JOB")
+	Function.Intrinsic.Control.EndIf
+
+'F.Intrinsic.String.Build("Select Job + Suffix as JOB, SUFFIX As SFX, JOB as JOB2, EMPLOYEE, SEQ, Job + Suffix + SEQ As tKey  from V_JOBS_IN_PROCESS_G where WORKCENTER = '{0}'",V.Args.WC,V.Local.sSql)
+F.Intrinsic.String.Build("Select JOB + SFX as JOB, SFX, JOB as JOB2, ' ' as EMPLOYEE, SEQ, JSS AS tKey from APSV3_JBLines where SEQRES = '{0}' and COMPLDATE is NULL order by DueDate", v.Args.WC, v.Local.sSql)
+F.Data.DataTable.CreateFromSQL("DTJOB","conX",v.Local.sSql,true)
+v.Local.sSql.Set("Select Job + Suffix + Seq as Job, Employee from Jobs_In_Process_G")
+F.Data.Dictionary.CreateFromSQL("DTEmployee", "conX", v.Local.sSQl)
+F.Data.Dictionary.SetDefaultReturn("DTEmployee", "")
+F.Data.DataTable.FillFromDictionary("DTJOB", "DTEmployee", "tKey", "Employee")
+F.Data.Dictionary.Close("DTEmployee")
+'check we returned values in the table
+Function.Intrinsic.Control.If(V.DataTable.DTJOB.RowCount, >, 0)
+	F.Data.DataTable.AddColumn("DTJOB","SEQ_DATE_DUE","String")	
+	F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.DTJOB.RowCount--, 1)
+		F.Intrinsic.String.Build("Select cast(duedate as date) as SEQ_DATE_DUE, JOB + SFX as JOB from APSV3_JBLINES  where JOB = '{0}' AND SFX = '{1}' AND SEQ = '{2}'",V.DataTable.DTJOB(v.Local.i).JOB2!Fieldvaltrim, V.DataTable.DTJOB(v.Local.i).SFX!Fieldvaltrim, V.DataTable.DTJOB(v.Local.i).SEQ!Fieldvaltrim,V.Local.sSql)
+		F.Data.DataTable.CreateFromSQL("T", "conX", V.Local.sSql)
+		Function.Intrinsic.Control.If(V.DataTable.T.RowCount, >, 0)
+			F.Data.DataTable.SetValue("DTJOB",V.Local.i,"SEQ_DATE_DUE",V.DataTable.T(0).SEQ_DATE_DUE!Fieldvaltrim)
+		Function.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("T")
+	F.Intrinsic.Control.Next(V.Local.i)
+
+	F.Data.DataTable.AddColumn("DTJOB","PART1","String")
+	F.Data.Dictionary.CreateFromSQL("dict", "conX", "Select Job + Suffix as JOB, Part as Part1 from V_JOB_Header")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("DTJOB", "dict", "JOB", "Part1")
+	F.Data.Dictionary.Close("dict")
+
+	F.Data.DataTable.AddColumn("DTJOB","Desc1","String")
+	F.Data.Dictionary.CreateFromSQL("dict", "conX", "Select Job + Suffix + SEQ As tKey, Description as Desc1 from V_JOB_OPERATIONS")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("DTJOB", "dict", "tKey", "Desc1")
+	F.Data.Dictionary.Close("dict")
+	
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "Part", "String", "Part1+'-'+Desc1")
+	
+	F.Data.DataTable.AddColumn("DTJOB","DATE_DUE","String")
+	F.Data.Dictionary.CreateFromSQL("dict", "conX", "Select Job + Suffix as JOB, Date_Due from V_JOB_Header")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("DTJOB", "dict", "JOB", "Date_Due")
+	F.Data.Dictionary.Close("dict")
+	
+	F.Data.DataTable.AddColumn("DTJOB","HOURS_ESTIMATED","String")
+	F.Data.Dictionary.CreateFromSQL("dict", "conX", "Select Job + Suffix + SEQ As tKey, HOURS_ESTIMATED from V_JOB_OPERATIONS")
+	F.Data.Dictionary.SetDefaultReturn("dict", "0.00")
+	F.Data.DataTable.FillFromDictionary("DTJOB", "dict", "tKey", "HOURS_ESTIMATED")
+	F.Data.Dictionary.Close("dict")
+
+	
+
+	'this need to tally
+	F.Data.DataTable.AddColumn("DTJOB","HOURS_WORKED","String")
+	F.Intrinsic.Control.For(V.Local.i, 0, V.DataTable.DTJOB.RowCount--, 1)
+		'from JOB_OPERATIONS- this is hours completed
+		F.Intrinsic.String.Build("Select Job + Suffix + SEQ As tKey, HOURS_ACTUAL from JOB_OPERATIONS Where tKey = '{0}' ",V.DataTable.DTJOB(v.Local.i).tKey!Fieldvaltrim, v.Local.ssql)
+		F.ODBC.Connection!conX.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		Function.Intrinsic.Control.If(V.Local.sRet(1), <>, "OOB")
+			V.Local.sHours.Set(V.Local.sRet(1))
+		Function.Intrinsic.Control.Else
+			V.Local.sHours.Set("0.00")
+		Function.Intrinsic.Control.EndIf
+
+		F.Intrinsic.String.Build("Select Job + Suffix + SEQUENCE As tKey, SUM(HOURS) as HOURS from JOBS_IN_PROCESS Where tKey = '{0}' Group by tKey ",V.DataTable.DTJOB(v.Local.i).tKey!Fieldvaltrim, v.Local.ssql)
+		F.ODBC.Connection!conX.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+		Function.Intrinsic.Control.If(V.Local.sRet(1), <>, "OOB")
+			F.Intrinsic.Math.Add(V.Local.sRet(1), V.Local.sHours, V.Local.sHours)
+		Function.Intrinsic.Control.EndIf
+		
+		
+		F.Intrinsic.String.Build("Select START_TIME from JOBS_IN_PROCESS_G Where JOB = '{0}' And SUFFIX='{1}' And SEQ='{2}' ",V.DataTable.DTJOB(v.Local.i).JOB2!Fieldvaltrim, V.DataTable.DTJOB(v.Local.i).SFX!Fieldvaltrim, V.DataTable.DTJOB(v.Local.i).SEQ!Fieldvaltrim,v.Local.ssql)
+		F.ODBC.Connection!conX.ExecuteAndReturn(V.Local.sSql, V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet, "#$#", V.Local.sRet)
+		F.Intrinsic.Control.If(v.Local.sRet.Trim, !=, "")
+		
+			F.Intrinsic.Control.For(V.Local.iC,0, V.Local.sRet.UBound, 1)
+			'put the START_TIME into decimal format
+				V.Local.sTemp.Set(V.Local.sRet(V.Local.iC))
+				F.Intrinsic.String.Left(V.Local.sTemp,2,V.Local.fStartHour.String)
+				F.Intrinsic.String.mid(V.Local.sTemp,3,2,V.Local.fStartMin.String)
+				F.Intrinsic.Control.If(V.Local.fStartMin,<>,0)
+					F.Intrinsic.Math.Div(V.Local.fStartMin.Float,60,V.Local.fStartMin)
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.Math.Add(V.Local.fStartHour,V.Local.fStartMin,V.Local.fStartTime)
+				
+				'put the current time into decimal format
+				V.Local.sTime.Set(V.Ambient.Time)
+				F.Intrinsic.String.Split(V.Local.sTime, " ", V.Local.sTime)
+				F.Intrinsic.String.Left(V.Local.sTime(1),2,V.Local.sHourNow)
+				F.Intrinsic.String.Replace(V.Local.sHourNow,":","",V.Local.sHourNow)
+				F.Intrinsic.String.LPad(V.Local.sHourNow,"0",2,V.Local.sHourNow)
+	
+				V.Local.sAmPm.Set(V.Local.sTime(2))
+				'if PM, add 12 to the current hour
+				F.Intrinsic.Control.If(V.Local.sAmPm,=,"PM")
+					F.Intrinsic.Math.sub(24,V.Local.sHourNow,V.Local.sHourNow)
+				F.Intrinsic.Control.EndIf
+	
+				F.Intrinsic.String.Split(V.Local.sTime(1), ":", V.Local.sTempMin)
+				'F.Intrinsic.String.Mid(V.Ambient.Time,4,2,V.Local.sMinNow)
+				F.Intrinsic.String.LPad(V.Local.sTempMin(1),"0",2,V.Local.sMinNow)
+				F.Intrinsic.Control.If(V.Local.sMinNow.float,<>,0)
+					F.Intrinsic.Math.Div(V.Local.sMinNow.Float,60,V.Local.sMinNow.Float)
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.Math.Add(V.Local.sHourNow.Float,V.Local.sMinNow.Float,V.Local.fTimeNow)
+	
+				'subtract the Start Time from the Current Time to get the Time Elapsed for the selected Employee
+				F.Intrinsic.Math.sub(V.Local.fTimeNow,V.Local.fStartTime,V.Local.fEmpOpen)
+				
+				'add to the actual hours
+				F.Intrinsic.Math.Add(V.Local.sHours,V.Local.fEmpOpen,V.Local.sHours)
+					
+			F.Intrinsic.Control.Next(V.Local.iC)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Format(V.Local.sHours,  "##########0.0000", V.Local.sHours)
+		F.Data.DataTable.SetValue("DTJOB",V.Local.i,"HOURS_WORKED",V.Local.sHours)
+		
+	F.Intrinsic.Control.Next(V.Local.i)
+	
+	
+	F.Data.DataTable.AddColumn("DTJOB","NAME","String")
+	F.Data.Dictionary.CreateFromSQL("dict", "conX", "Select EMPLOYEE, NAME from V_EMPLOYEE_MSTR")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("DTJOB", "dict", "EMPLOYEE", "NAME")
+	F.Data.Dictionary.Close("dict")
+	
+	'add columns for the correct order
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "JOB_V", "String", "JOB")
+	
+	F.Data.DataTable.AddColumn("DTJOB", "DATE_DUE_V", "String")
+	F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.DTJOB.RowCount--, 1)
+		V.Local.sDate.Set(V.DataTable.DTJOB(v.Local.i).DATE_DUE!Fieldval)
+		F.Intrinsic.String.Format(V.DataTable.DTJOB(v.Local.i).DATE_DUE!Fieldval, "MM/DD/YYYY", V.Local.sDate)
+		F.Data.DataTable.SetValue("DTJOB",V.Local.i,"DATE_DUE_V",V.Local.sDate)	
+	F.Intrinsic.Control.Next(V.Local.i)
+	
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "SEQ_V", "String", "SEQ")
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "PART_V", "String", "PART")
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "SEQ_DATE_DUE_T", "String", "SEQ_DATE_DUE")
+	F.Data.DataTable.AddColumn("DTJOB", "SEQ_DATE_DUE_V", "String")
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "HOURS_ESTIMATED_V", "String", "HOURS_ESTIMATED")
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "HOURS_WORKED_V", "String", "HOURS_WORKED")
+	F.Data.DataTable.AddExpressionColumn("DTJOB", "NAME_V", "String", "NAME")
+	F.Data.DataTable.RemoveColumn("DTJOB", "Employee")
+	F.Data.DataTable.RemoveColumn("DTJOB", "tKey")	
+	Function.Data.DataView.Create("DTJOB", "DTJOB_V", 22, , "SEQ_DATE_DUE_V ASC")
+	F.Data.DataView.ToDataTable("DTJOB", "DTJOB_V", "JOB", TRUE)
+	F.Data.DataTable.RemoveColumn("JOB", "JOB")
+	F.Data.DataTable.RemoveColumn("JOB", "JOB2")
+	F.Data.DataTable.RemoveColumn("JOB", "SFX")
+	F.Data.DataTable.RemoveColumn("JOB", "DATE_DUE")
+	F.Data.DataTable.RemoveColumn("JOB", "SEQ")
+	F.Data.DataTable.RemoveColumn("JOB", "PART")
+	F.Data.DataTable.RemoveColumn("JOB", "HOURS_ESTIMATED")
+	F.Data.DataTable.RemoveColumn("JOB", "HOURS_WORKED")
+	F.Data.DataTable.RemoveColumn("JOB", "NAME")	
+	F.Data.DataTable.RemoveColumn("JOB", "Part1")
+	F.Data.DataTable.RemoveColumn("JOB", "Desc1")
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("GetOpenJobs_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GetOpenJobs.End
+
+Program.Sub.SaveWorkcenters.Start
+F.Intrinsic.Control.SetErrorHandler("SaveCfgFile_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Save updated .cfg file that contains Workcenters and Cutoff Dates for data to be loaded on each HTML file
+'double delimited by !*! and *!*
+
+V.Local.sTemp.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sFileContents.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.iRows.Declare(Long)
+V.Local.sRow.Declare(String)
+V.Local.sSQL.Declare(String)
+
+V.Local.iRows.Set(V.Screen.F_MaintCfgFile!gsfg_Workcenters.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+
+'Save workcenters to custom table.
+F.Intrinsic.Control.For(V.Local.i,1,V.Local.iRows,1)
+	Gui.F_MaintCfgFile.gsfg_Workcenters.ReadRow(V.Local.i,V.Local.sRow)
+	V.Local.sTemp.Set(V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+	F.Intrinsic.Control.If(V.Local.sRow(0).trim,<>,"")
+	F.Intrinsic.Control.AndIf(V.Local.sRow(3),<>,"1")
+		F.Intrinsic.String.Build("{0}:{1}",V.Global.sWCs,V.Local.sRow(0),V.Global.sWCs)
+		F.Intrinsic.String.Build("SELECT * FROM GCG_4686_HTML_CONFIG WHERE Workcenter = '{0}'",V.Local.sRow(0),V.Local.sSQL)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRW("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+			F.Intrinsic.String.Build("INSERT INTO GCG_4686_HTML_CONFIG (Line_Type,Workcenter,Cutoff_Days) VALUES ('W','{0}','{1}')",V.Local.sRow(0),V.Local.sRow(2),V.Local.sSQL)
+			F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("UPDATE GCG_4686_HTML_CONFIG SET Cutoff_Days = '{0}' WHERE Workcenter = '{1}'",V.Local.sRow(2),V.Local.sRow(0),V.Local.sSQL)
+			F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.ElseIf(V.Local.sRow(3),=,1)
+		F.Intrinsic.String.Build("DELETE FROM GCG_4686_HTML_CONFIG WHERE Workcenter = '{0}'",V.Local.sRow(0),V.Local.sSQL)
+		F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SaveCfgFile_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SaveWorkcenters.End
+
+program.sub.f_maintcfgfile_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_maintcfgfile_unload_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Label("f_maintcfgfile_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.f_maintcfgfile_unload.End
+
+program.sub.cmdwcbrowse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdwcbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bMatch.Declare(Boolean)
+V.Local.sRows.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sWC.Declare(String)
+
+V.Local.bMatch.Set(False)
+
+'Return Workcenter to Grid if selected
+Function.Intrinsic.UI.Browser(400,"",Variable.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.sRows.Set(V.Screen.F_MaintCfgFile!gsfg_Workcenters.Rows)
+	F.Intrinsic.Math.Sub(V.Local.sRows,1,V.Local.sRows)
+	F.Intrinsic.Control.For(V.Local.i,1,V.Local.sRows,1)
+		Gui.F_MaintCfgFile.gsfg_Workcenters.GetTextMatrix(0,V.Local.i,V.Local.sWC)
+		F.Intrinsic.Control.If(V.Local.sRet(0),=,V.Local.sWC)
+			V.Local.bMatch.Set(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.i)
+	F.Intrinsic.Control.If(V.Local.bMatch,=,False)
+		Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(0,V.Local.sRows,V.Local.sRet(0))
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Cmdwcbrowse_click)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdwcbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdwcbrowse_click.End
+
+program.sub.cmdsavewcs_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsavewcs_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Save configuration file with committed changes to grid
+'Saves to table, no longer uses config files.
+Gui.F_MaintCfgFile.gsfg_Workcenters.Commit
+
+F.Intrinsic.Control.CallSub(Saveworkcenters)
+
+F.Intrinsic.Control.CallSub(Savesleeptime)
+
+'recall buildstyle before reloading
+F.Intrinsic.Control.CallSub(Buildstyles)
+'load from file
+F.Intrinsic.Control.CallSub(Load_gsfgworkcenters)
+
+'Save Logo
+F.Intrinsic.Control.CallSub(Savelogo)
+
+'Delete Old Web Pages that are not valid for current WC's
+F.Intrinsic.Control.CallSub(Deleteoldpages)
+
+F.Intrinsic.Control.Label("cmdsavewcs_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsavewcs_click.End
+
+program.sub.gsfg_workcenters_commandclick.start
+F.Intrinsic.Control.SetErrorHandler("gsfg_workcenters_commandclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'browse for flexgrid and return it to grid
+F.Intrinsic.Control.If(V.Args.Column,=,1)
+	F.Intrinsic.Control.CallSub(Cmdwcbrowse_click,"Row",V.Args.Key)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfg_workcenters_commandclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfg_workcenters_commandclick.End
+
+Program.Sub.BuildStyles.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStyles_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_MaintCfgFile.gsfg_Workcenters.Cols(4)
+Gui.F_MaintCfgFile.gsfg_Workcenters.Rows(1)
+Gui.F_MaintCfgFile.gsfg_Workcenters.Rows(2)
+Gui.F_MaintCfgFile.gsfg_Workcenters.FixedRows(1)
+
+'WorkCenter
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(0,0,"Workcenter")
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,0,"Type","Locked",True)
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,0,"Format","Alignment",2)
+
+'Browse Workcenter
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(1,0,"")
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,1,"Type","Command","+")
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,1,"Format","Alignment",4)
+
+'Cutoff Date
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(2,0,"Cutoff Days")
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,2,"Format","Alignment",2)
+
+'Remove WC
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(3,0,"Remove")
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(2,3,"Format","Alignment",4)
+Gui.F_MaintCfgFile.gsfg_Workcenters.BuildStyle(1,3,"Type","Checkbox","")
+
+'column %'s
+Gui.F_MaintCfgFile.gsfg_Workcenters.SetColumnPercentages(".40:.10:.30:.20")
+
+'Set Defualt to 7 Days
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(2,1,7)
+
+Gui.F_MaintCfgFile.gsfg_Workcenters.ApplyStyle(1,1)
+Gui.F_MaintCfgFile.gsfg_Workcenters.ApplyStyle(0,2)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyles_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyles.End
+
+Program.Sub.load_gsfgWorkcenters.Start
+F.Intrinsic.Control.SetErrorHandler("load_gsfgWorkcenters_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sGrid.Declare(String)
+V.Local.iRows.Declare(Long)
+V.Local.i.Declare(Long)
+V.Local.sRow.Declare(String)
+
+Gui.F_MaintCfgFile.gsfg_Workcenters.Visible(False)
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT Workcenter, '+', Cutoff_Days  FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'W'")
+Gui.F_MaintCfgFile.gsfg_Workcenters.LoadRecordSet("conX!rst",1)
+F.ODBC.conX!rst.Close
+
+'Apply Styles Correctly
+V.Local.iRows.Set(V.Screen.F_MaintCfgFile!gsfg_Workcenters.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.i,1,V.Local.iRows,1)
+	Gui.F_MaintCfgFile.gsfg_Workcenters.ApplyStyle(V.Local.i,1)
+F.Intrinsic.Control.Next(V.Local.i)
+
+'Remove Extra Blank Row
+F.Intrinsic.Math.Sub(V.Screen.F_MaintCfgFile!gsfg_Workcenters.Rows,1,V.Local.i)
+Gui.F_MaintCfgFile.gsfg_Workcenters.Rows(V.Local.i)
+
+Gui.F_MaintCfgFile.gsfg_Workcenters.Visible(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("load_gsfgWorkcenters_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.load_gsfgWorkcenters.End
+
+program.sub.cmdaddwc_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddwc_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRows.Declare(Long)
+V.Local.i.Declare(Long)
+
+'add a row
+V.Local.iRows.Set(V.Screen.F_MaintCfgFile!gsfg_Workcenters.Rows)
+F.Intrinsic.Math.Add(V.Local.iRows,1,V.Local.iRows)
+Gui.F_MaintCfgFile.gsfg_Workcenters.Rows(V.Local.iRows)
+'apply style
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.i,1,V.Local.iRows,1)
+	Gui.F_MaintCfgFile.gsfg_Workcenters.ApplyStyle(V.Local.i,1)
+F.Intrinsic.Control.Next(V.Local.i)
+
+'set default days to 7
+Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(2,V.Local.iRows,7)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddwc_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddwc_click.End
+
+program.sub.gsfg_workcenters_posttextmatrix.start
+F.Intrinsic.Control.SetErrorHandler("gsfg_workcenters_posttextmatrix_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Make sure input is integer no decimals or non-numeric allowed
+
+V.Local.sRet.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.bNumeric.Declare(Boolean)
+F.Intrinsic.Control.If(V.Args.Column,=,2)
+	Gui.F_MaintCfgFile.gsfg_Workcenters.GetTextMatrix(V.Args.Column,V.Args.Key,V.Local.sRet)
+	F.Intrinsic.Math.IsNumeric(V.Local.sRet,V.Local.bNumeric)
+	F.Intrinsic.Control.If(V.Local.bNumeric,=,False)
+		Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(V.Args.Column,V.Args.Key,7)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Math.ConvertToFloat(V.Local.sRet,V.Local.iRet)
+		Gui.F_MaintCfgFile.gsfg_Workcenters.TextMatrix(V.Args.Column,V.Args.Key,V.Local.iRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfg_workcenters_posttextmatrix_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfg_workcenters_posttextmatrix.End
+
+program.sub.cmdlogobrws_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdlogobrws_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Browse for logo that will be used for HTML Page. ".png" 280px X 85px
+V.Local.sRet.Declare(String)
+
+'only .png files allowed
+F.Intrinsic.UI.ShowOpenFileDialog("","jpg|*.jpg","",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	V.Global.sFQP.Set(V.Local.sRet)
+	F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet,V.Local.sRet)
+	Gui.F_MaintCfgFile.txtLogo.Text(V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdlogobrws_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdlogobrws_click.End
+
+Program.Sub.LoadLogo.Start
+F.Intrinsic.Control.SetErrorHandler("LoadLogo_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'load logo filepath that is being used from .cfg file
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT Logo FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+	'F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sRet)
+	V.Local.sFile.Set(V.ODBC.conX!rst.FieldValTrim!Logo)
+	F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.Local.sFile,V.Local.sRet)
+	'F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+	F.Intrinsic.File.Exists(V.Local.sRet,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		Gui.F_MaintCfgFile.txtLogo.Text(V.Local.sFile)
+	F.Intrinsic.Control.Else
+		F.ODBC.Connection!conX.Execute("DELETE FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+		Gui.F_MaintCfgFile.txtLogo.Text("customer-logo_fpo.jpg")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_MaintCfgFile.txtLogo.Text("customer-logo_fpo.jpg")
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadLogo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadLogo.End
+
+Program.Sub.SaveLogo.Start
+F.Intrinsic.Control.SetErrorHandler("SaveLogo_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sSQL.Declare(String)
+V.Local.sFileName.Declare(String)
+'V.Local.bExists2.Declare(Boolean)
+
+V.Local.sFile.Set(V.Screen.F_MaintCfgFile!txtLogo.Text)
+
+F.Intrinsic.Control.If(V.Local.sFile.Trim,<>,"customer-logo_fpo.jpg")
+
+'file path that is used by logo
+F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.Screen.F_MaintCfgFile!txtLogo.Text,V.Local.sFile)
+
+'replace template logo image with Logo path from screen
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.File.CopyFile(V.Global.sFQP,V.Local.sFile)
+F.Intrinsic.Control.EndIf
+'Update custom table to store current logo
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT * FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Build("INSERT INTO GCG_4686_HTML_CONFIG (Line_Type,Logo) VALUES ('L','{0}')",V.Screen.F_MaintCfgFile!txtLogo.Text,V.Local.sSQL)
+	F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+F.Intrinsic.Control.Else
+	V.Local.sFileName.Set(V.ODBC.conX!rst.FieldValTrim!Logo)
+	F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.Local.sFileName,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True,"and",V.Screen.F_MaintCfgFile!txtLogo.Text,<>,V.Local.sFileName)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Build("UPDATE GCG_4686_HTML_CONFIG SET Logo = '{0}' WHERE Line_Type = 'L'",V.Screen.F_MaintCfgFile!txtLogo.Text,V.Local.sSQL)
+	F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+F.Intrinsic.Control.Else
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT * FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+		F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.ODBC.conX!rst.FieldValTrim!Logo,V.Local.sFile)
+		F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists,=,True)
+			F.Intrinsic.File.DeleteFile(V.Local.sFile)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conX.Execute("DELETE FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'L'")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SaveLogo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SaveLogo.End
+
+Program.Sub.DeleteOldPages.Start
+F.Intrinsic.Control.SetErrorHandler("DeleteOldPages_Err")
+F.Intrinsic.Control.ClearErrors
+'Deletes all html files that are no longer valid for current workcenter configuration
+V.Local.sError.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sFileList.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.i.Declare(Long)
+V.Local.i2.Declare(Long)
+V.Local.bStatus.Declare(Boolean)
+
+'get listing of HTML files
+F.Intrinsic.String.Build("{0}\GAB\GAS\GCG_WIP_*_{1}.html",V.Caller.PluginsDir,V.Caller.CompanyCode,V.Local.sFile)
+F.Intrinsic.File.GetFileList(V.Local.sFile,V.Local.sFileList)
+
+'split list of current workcenters to loop through below and compare against file list
+F.intrinsic.string.split(V.Global.sWCs,":",V.Global.sWCs)
+
+'loop through file list of HTML pages for workcenters
+F.Intrinsic.Control.If(V.Local.sFileList.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Local.sFileList,":",V.Local.sFileList)
+	F.Intrinsic.Control.For(V.Local.i,V.Local.sFileList.LBound,V.Local.sFileList.UBound,1)
+		F.Intrinsic.Control.If(V.Local.sFileList(v.Local.i).Trim,<>,"GCG_WIP_TEMPLATE.html")
+			F.Intrinsic.String.Split(V.Local.sFileList(v.Local.i),"_",V.Local.sRet)
+			F.Intrinsic.String.Split(V.Local.sRet(2).Trim,".",V.Local.sRet)
+			'Loop through current WC's from .cfg file and compare if they do not match then delete html file
+			V.Local.bStatus.Set(False)
+			F.Intrinsic.Control.For(V.Local.i2,V.Global.sWCs.LBound,V.Global.sWCs.UBound,1)
+				F.Intrinsic.Control.If(V.Global.sWCs(v.Local.i2).Trim,<>,"")
+					F.Intrinsic.Control.If(V.Local.sRet(0).Trim,=,V.Global.sWCs(v.Local.i2).Trim)
+						V.Local.bStatus.Set(True)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.If(V.Local.bStatus,<>,True)
+				'double check for file existing before deleting
+				F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.Local.sFileList(V.Local.i),V.Local.sFile)
+				F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+				F.Intrinsic.Control.If(V.Local.bExists,=,True)
+					F.Intrinsic.String.Build("{0}\GAB\GAS\{1}",V.Caller.PluginsDir,V.Local.sFileList(v.Local.i),V.Local.sFile)
+					F.Intrinsic.File.DeleteFile(V.Local.sFile)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("DeleteOldPages_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.DeleteOldPages.End
+
+program.sub.chkdefaultsleep_click.start
+F.Intrinsic.Control.SetErrorHandler("chkdefaultsleep_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'If Default is true set value ot txtSleep to 2 which is default and disable txtSleep else enable txtSleep
+F.Intrinsic.Control.If(V.Screen.F_MaintCfgFile!chkDefaultSleep.Value,=,1)
+	Gui.F_MaintCfgFile.txtSleep.Text("2")
+	Gui.F_MaintCfgFile.txtSleep.Enabled(False)
+F.Intrinsic.Control.Else
+	Gui.F_MaintCfgFile.txtSleep.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkdefaultsleep_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkdefaultsleep_click.End
+
+program.sub.txtsleep_lostfocus.start
+F.Intrinsic.Control.SetErrorHandler("txtsleep_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTemp.Declare(String)
+
+V.Local.sTemp.Set(V.Screen.F_MaintCfgFile!txtSleep.Text)
+'set default sleep back to 2 minutes if entry is blank or less than 1
+F.Intrinsic.Control.If(V.Local.sTemp.Trim,=,"","or",V.Local.sTemp,<,1)
+	Gui.F_MaintCfgFile.txtSleep.Text("2")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtsleep_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txtsleep_lostfocus.End
+
+Program.Sub.LoadSleep.Start
+F.Intrinsic.Control.SetErrorHandler("LoadSR_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Set the values of Row_Count and Refresh_Rate based off the last save to the database.
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT Refresh_Rate FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'P'")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+	Gui.F_MaintCfgFile.txtSleep.Text(V.ODBC.conX!rst.FieldValTrim!Refresh_Rate)
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadSR_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadSleep.End
+
+program.sub.chkdefaultlogo_click.start
+F.Intrinsic.Control.SetErrorHandler("chkdefaultlogo_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'If default check is true, disable txtSleep and set its value to default else enable txtSleep
+F.Intrinsic.Control.If(V.Screen.F_MaintCfgFile!chkDefaultLogo.Value,=,1)
+	Gui.F_MaintCfgFile.txtLogo.Text("customer-logo_fpo.jpg")
+	Gui.F_MaintCfgFile.cmdLogoBrws.Enabled(False)
+F.Intrinsic.Control.Else
+	Gui.F_MaintCfgFile.cmdLogoBrws.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkdefaultlogo_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkdefaultlogo_click.End
+
+Program.Sub.SaveSleepTime.Start
+F.Intrinsic.Control.SetErrorHandler("SaveSleepTime_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+'Saving the Sleep Time in GCG_HTLM_CONFIG table as it's own entry in order to make it clear this is standard across all Workcenters
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","SELECT * FROM GCG_4686_HTML_CONFIG WHERE Line_Type = 'P'")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Build("INSERT INTO GCG_4686_HTML_CONFIG (Line_Type,Refresh_Rate) VALUES ('P','{0}')",V.Screen.F_MaintCfgFile!txtSleep.Text,V.Local.sSQL)
+	F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("UPDATE GCG_4686_HTML_CONFIG SET Refresh_Rate = '{0}' WHERE Line_Type = 'P'",V.Screen.F_MaintCfgFile!txtSleep.Text,V.Local.sSQL)
+	F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SaveSleepTime_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4686_WORKCENTER_HTML.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_maintcfgfile_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SaveSleepTime.End
+
+Program.Sub.Comments.Start
+${$0$}$Test Script$}$SFF$}$7/30/2014 10:28:13 AM$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$Maintenance Program that is described in quote 5491.
+
+Program.Sub.Comments.End
+
